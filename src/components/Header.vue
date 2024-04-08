@@ -216,9 +216,23 @@ header .nav .logo{
 
 }
 
-@media (max-width: 500px){
+@media (max-width: 480px){
     .navbar-container input[type="checkbox"]:checked ~ .logo{
         display: none;
+    }
+    .navbar .menu-items{
+        padding-top: 500px;
+        background: #fff;
+        height: 100vh;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+        width: 100% !important;
     }
 } 
 </style>
