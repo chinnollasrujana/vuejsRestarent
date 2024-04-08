@@ -1,6 +1,6 @@
 <template>
    <div class="main">
- 
+ <h1 class="menu_cate_titel">Non Veg Appetizers</h1>
   <ul class="cards">
     <li class="cards_item">
       <div class="card">
@@ -8,7 +8,7 @@
         <div class="card_content">
           <h2 class="card_title">Chicken 555</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$13.00</span>
         </div>
       </div>
     </li>
@@ -18,7 +18,7 @@
         <div class="card_content">
           <h2 class="card_title">Checken 65</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$12.00</span>
         </div>
       </div>
     </li>
@@ -28,17 +28,22 @@
         <div class="card_content">
           <h2 class="card_title">Pepper Chicken Dry</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$17.00</span>
         </div>
       </div>
     </li>
+   
+    </ul>
+    <h1 class="menu_cate_titel">Veg Appetizers</h1>
+    <ul class="cards">
+     
     <li class="cards_item">
       <div class="card">
         <div class="card_image"><img src="../assets/images/menuimages/Curry-Leaf_Chicken.jpeg"></div>
         <div class="card_content">
           <h2 class="card_title">Curry Leaf Chicken</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$15.00</span>
         </div>
       </div>
     </li>
@@ -48,7 +53,7 @@
         <div class="card_content">
           <h2 class="card_title">Chilli Shrimp</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$15.00</span>
         </div>
       </div>
     </li>
@@ -58,17 +63,20 @@
         <div class="card_content">
           <h2 class="card_title">Chilli Chicken</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$13.00</span>
         </div>
       </div>
     </li>
+  </ul>
+    <h1 class="menu_cate_titel">Biryani, Fried Rice & More</h1>
+    <ul class="cards">
     <li class="cards_item">
       <div class="card">
         <div class="card_image"><img src="../assets/images/menuimages/chiken-menchurya.jpeg"></div>
         <div class="card_content">
           <h2 class="card_title">Chicken 555</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$12.00</span>
         </div>
       </div>
     </li>
@@ -78,7 +86,7 @@
         <div class="card_content">
           <h2 class="card_title">Checken 65</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$10.00</span>
         </div>
       </div>
     </li>
@@ -88,17 +96,20 @@
         <div class="card_content">
           <h2 class="card_title">Pepper Chicken Dry</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$13.00</span>
         </div>
       </div>
     </li>
+  </ul>
+    <h1 class="menu_cate_titel">Desserts</h1>
+    <ul class="cards">
     <li class="cards_item">
       <div class="card">
         <div class="card_image"><img src="../assets/images/menuimages/Curry-Leaf_Chicken.jpeg"></div>
         <div class="card_content">
           <h2 class="card_title">Curry Leaf Chicken</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$15.00</span>
         </div>
       </div>
     </li>
@@ -108,7 +119,7 @@
         <div class="card_content">
           <h2 class="card_title">Chilli Shrimp</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">Read More</button>
+          <span>$11.00</span>
         </div>
       </div>
     </li>
@@ -118,7 +129,7 @@
         <div class="card_content">
           <h2 class="card_title">Chilli Chicken</h2>
           <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <button class="btn card_btn">View</button>
+          <span>$09.00</span>
         </div>
       </div>
     </li>
@@ -142,11 +153,10 @@ export default{
   max-width: 1200px;
   margin: 20px auto;
 }
-
 h1 {
     font-size: 24px;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 
 img {
@@ -155,30 +165,12 @@ img {
   vertical-align: middle;
 }
 
-.btn {
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-}
-
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 3%;
 }
 
 .cards_item {
@@ -228,5 +220,7 @@ img {
   margin-bottom: 1.25rem;    
   font-weight: 400;
 }
-
+.menu_cate_titel{
+  margin-left: 5%;
+}
    </style>

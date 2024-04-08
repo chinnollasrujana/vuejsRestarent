@@ -5,9 +5,9 @@
 
  <div class='container'>
   <div class="item">
-    
+   
     <div class="about_text">
-      
+      <h1>About us</h1>
       <p> We warmly welcome you as our guest to Indian Restaurant Flavours. Whether you are familiar with Indian cuisine, or a first-timer, our team take great care to ensure each dish suits the guest perfectly, and our chefs are happy to adjust dishes to personal taste. Our list of food is chosen with care to complement the flavours of Indian cuisine. For special occasions, we are happy to prepare a specific menu in consultation with our customers, and we always welcome groups and parties
  </p>
     <img src="../assets/images/logo2.png" />
