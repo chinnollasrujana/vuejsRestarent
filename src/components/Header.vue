@@ -231,7 +231,6 @@ header .nav .logo{
         padding-left: 40px;
         transition: transform 0.5s ease-in-out;
         box-shadow:  5px 0px 10px 0px #aaa;
-        overflow: scroll;
         width: 100% !important;
     }
 } 

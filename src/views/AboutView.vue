@@ -77,7 +77,7 @@ support@indianrestaurant.com</p>
 }
 .about_text{
   display: block;
-  position: relative;
+  
 }
 .item h1{
   text-align: left;
