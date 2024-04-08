@@ -1,200 +1,145 @@
 <template>
-   
-    <!-- ==== Intro Section Start ==== -->
-    <div class="intro-section" id="home">
-      <div class="bg-img"></div>
-      <div class="intro-content">
-        <h1>Web Developer</h1>
-        <h6>from Kenya</h6>
-        <p class="tagline">
-          <span class="change-container">
-            <span class="changing">get what you want</span>
-            <span class="changing">how you want it</span>
-            <span class="changing">when you want it</span>
-          </span>
-        </p>
-        <!-- social media -->
-      </div>
-    </div>	
-   
- </template>
- <script>
- export default{
-    name: 'MenuHome'
- }
+  <div class="main">
 
- </script>
- 
- <style>
- 
- 
- .intro-section .intro-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+ <ul class="cards">
+   
+   <li class="cards_item">
+     <div class="card">
+       <div class="card_image"><img src="../assets/images/menuimages/menuimages.jpeg"></div>
+       <div class="card_content">
+         <h2 class="card_title">Non Veg Appetizers</h2>
+       </div>
+     </div>
+   </li>
+   <li class="cards_item">
+     <div class="card">
+       <div class="card_image"><img src="../assets/images/menuimages/chiken-menchurya.jpeg"></div>
+       <div class="card_content">
+         <h2 class="card_title">Veg Appetizers</h2>
+      
+       </div>
+     </div>
+   </li>
+   <li class="cards_item">
+     <div class="card">
+       <div class="card_image"><img src="../assets/images/menuimages/checken_65.jpeg"></div>
+       <div class="card_content">
+         <h2 class="card_title">Non Veg Main Course </h2>
+       </div>
+     </div>
+   </li>
+   <li class="cards_item">
+     <div class="card">
+       <div class="card_image"><img src="../assets/images/menuimages/Pepper_Chicken-Dry.jpeg"></div>
+       <div class="card_content">
+         <h2 class="card_title">Veg Main Course</h2>
+       </div>
+     </div>
+   </li>
+   <li class="cards_item">
+     <div class="card">
+       <div class="card_image"><img src="../assets/images/menuimages/Curry-Leaf_Chicken.jpeg"></div>
+       <div class="card_content">
+         <h2 class="card_title">Biryani, Fried Rice & More</h2>
+       </div>
+     </div>
+   </li>
+   <li class="cards_item">
+     <div class="card">
+       <div class="card_image"><img src="../assets/images/menuimages/Chilli-Shrimp.jpeg"></div>
+       <div class="card_content">
+         <h2 class="card_title">Desserts</h2>
+       </div>
+     </div>
+   </li>
+ </ul>
+</div>
+
+</template>
+<script>
+export default{
+  name: 'Header'
+}
+
+
+</script>
+
+<style>
+
+
+.main{
+
+ max-width: 1200px;
+ margin: 20px auto;
+}
+
+h1 {
+   font-size: 24px;
+   font-weight: 400;
+   text-align: center;
+}
+
+img {
+ height: auto;
+ max-width: 100%;
+ vertical-align: middle;
+}
+
+
+.cards {
+ display: flex;
+ flex-wrap: wrap;
+ list-style: none;
+ margin: 0;
+ padding: 20%;
+}
+
+.cards_item {
+ display: flex;
+ padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+ .cards_item {
+   width: 50%;
  }
- 
- .intro-section .intro-content h1 {
-  color: #b1d4e0;
-  font-size: 5rem;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  margin-top: 80px;
+}
+
+@media (min-width: 56rem) {
+ .cards_item {
+   width: 33.3333%;
  }
- 
- .intro-section .intro-content h6{
-  margin-top: 5px;
-  color: #b1d4e0;
-  font-size: 2.5rem;
-  font-weight: 300;
- }
- 
- .intro-section .intro-content p {
-  margin-top: 40px;
-  color: #b1d4e0;
- }
- 
- .intro-content .tagline {
-  margin-top:80px;
- }
- 
- .intro-section .intro-content .tagline .change-container{
-  position: relative;
-  display: inline-block;
-  width: 560px;
-  margin-bottom: 55px;
-  margin-top: 30px;
- }
- 
- .intro-section .intro-content .changing {
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  left:0;
-  bottom:0;
-  height:0;
-  opacity:0;
-  color: #b1d4e0;
-  text-transform: uppercase;
-  word-spacing: 5px;
-  text-align: center;
-  font-size: 2.5rem;
- }
- 
- .changing:nth-child(1) {
-  animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 1.5s infinite;
- }
- 
- .changing:nth-child(2) {
-  animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 3s infinite;
- }
- 
- .changing:nth-child(3) {
-  animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
- }
- 
- @keyframes revealNextWord {
-  0% { 
-    opacity: 0.3; 
-    height: 0.0; 
-  }
-  10% { 
-    opacity: 1; 
-    height:1.2em; 
-  }
-  20% { 
-    opacity: 1; 
-    height:1.2em; 
-  }
-  28% { 
-    opacity: 0; 
-    height:2em; 
-  }
-  
- }
- 
- .intro-section .intro-content .header-btn a{
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: #3498db;
-  /* background-color: #b1d4e0; */
-  padding: 15px;
-  border-radius: 5px;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
- }
- 
- .intro-section .intro-content .header-btn a:before{
-  position: absolute;
-  content: ""; 
-  top: 0px;
-  height: 100%;
-  left: -25%;
-  width: 0%;
-  background-color: #3498db;
-  transform: skew(50deg);
-  transition-duration: 1s;
-  z-index: 1;
- }
- 
- .intro-section .intro-content .header-btn a:hover{
-  color: #b1d4e0;
- }
- 
- .intro-section .intro-content .header-btn a:hover:before{
-  width: 170%;
- 
- }
- 
- .intro-section .intro-content .header-btn a span{
-  position: relative;
-  z-index: 9;
- }
- 
- /* Large Mobile :480px. */
- 
- @media only screen and (max-width: 767px) {
- 
-  .intro-section .intro-content h1 {
-    font-size: 2.8rem;
-  }
- 
-  .intro-section .intro-content h6 {
-    font-size: 1.4rem;
-  }
- 
-  .intro-section .intro-content .changing {
-    font-size: 1.5rem;
-  }
- 
-  .intro-section .intro-content .header-btn a{
-    font-size: 1.25rem;
-  }
- 
- }
- 
- 
- /* small mobile :320px. */
- 
- @media only screen and (max-width: 479px) {
- 
-  .intro-inner .intro-content h1 {
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
- 
-  .intro-inner .intro-content p {
-    margin-top: 10px;
-  }
- 
- }
-    
-    </style>
+}
+
+.card {
+ background-color: white;
+ border-radius: 0.25rem;
+ box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+ display: flex;
+ flex-direction: column;
+ overflow: hidden;
+}
+
+.card_content {
+ padding: 1rem;
+ /* background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%); */
+}
+
+.card_title {
+ color: #000;
+ font-size: 1.1rem;
+ font-weight: 700;
+ letter-spacing: 1px;
+ text-transform: capitalize;
+ margin: 0px;
+}
+
+.card_text {
+ color: #000;
+ font-size: 0.875rem;
+ line-height: 1.5;
+ margin-bottom: 1.25rem;    
+ font-weight: 400;
+}
+
+  </style>
