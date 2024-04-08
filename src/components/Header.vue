@@ -1,18 +1,26 @@
+<script>
+export default{
+    name: 'Header'
+}
+
+
+</script>
 <template>
    <header>
 		<nav class="navigation shadow">
 
 			<!-- Logo -->
 			<div class="logo">
-				<img src="../assets/images/logo2.png" />
+        <RouterLink to="/"><img src="../assets/images/logo2.png" /></RouterLink>
+				
 			</div>
 			
 			<!-- Navigation -->
 			<ul class="menu-list">
-				<li><a href="#">Home |</a> </li>
-                <li><a href="#">Menu |</a></li>
-				<li><a href="#">About | </a></li>
-				<li><a href="#">Contact</a></li>
+        
+        <li><RouterLink to="/">Home</RouterLink></li>
+        <li><RouterLink to="/menu">Menu</RouterLink></li>
+        <li><RouterLink to="/about">About</RouterLink></li>
 			</ul>
 
 			<div class="humbarger">
@@ -26,13 +34,7 @@
 	
 	</header>
 </template>
-<script>
-export default{
-    name: 'Header'
-}
 
-
-</script>
 
 <style>
 *{
@@ -77,7 +79,7 @@ header .navigation .menu-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 25%;
+  width: 15%;
   margin: auto 30px auto 0;
 }
 
