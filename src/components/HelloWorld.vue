@@ -1,6 +1,32 @@
 <template>
    <div class="main">
- <h1 class="menu_cate_titel">Non Veg Appetizers</h1>
+
+
+    
+ <h1 class="menu_cate_titel">Food Details</h1>
+ <div class="news-feed">
+    <div v-for="item in newsData" :key="item.id" class="news-item">
+    <h2>{{ item.name }}</h2>
+    <p>{{ item.price }}</p>
+    <p>{{ item.description }}</p>
+    
+   
+    </div>
+    </div>
+ <ul class="cards">
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image"><img src="../assets/images/menuimages/chiken-menchurya.jpeg"></div>
+        <div class="card_content">
+          <h2 class="card_title">Chicken 555</h2>
+          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+          <span>$13.00</span>
+        </div>
+      </div>
+    </li>
+    
+  </ul>
+
   <ul class="cards">
     <li class="cards_item">
       <div class="card">
@@ -139,7 +165,10 @@
 </template>
 <script>
 export default{
-   name: 'Header'
+   name: 'Header',
+   props: {
+    newsData: Array,
+    },
 }
 
 
