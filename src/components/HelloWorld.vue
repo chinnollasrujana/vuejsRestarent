@@ -1,33 +1,41 @@
 <template>
-   <div class="main">
-
-
-    
- <h1 class="menu_cate_titel">Food Details</h1>
- <div class="news-feed">
-    <div v-for="item in newsData" :key="item.id" class="news-item">
-    <h2>{{ item.name }}</h2>
-    <p>{{ item.price }}</p>
-    <p>{{ item.description }}</p>
-    
-   
+  <div class="main">
+    <div class="news-feed">
+      <h1 class="menu_cate_titel">Non Veg Appetizers</h1>
+      <ul class="cards">
+        <li class="cards_item" v-for="item in newsData" :key="item.id">
+          <div class="card">
+            <div class="card_image">
+              <img src="../assets/images/menuimages/chiken-menchurya.jpeg" />
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">{{ item.title }}</h2>
+              <p class="card_text">{{ item.description }}</p>
+              <span>$13.00</span>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
+    <div class="news-feed">
+      <h1 class="menu_cate_titel">Veg Appetizers</h1>
+      <ul class="cards">
+        <li class="cards_item" v-for="item in newsData" :key="item.id">
+          <div class="card">
+            <div class="card_image">
+              <img src="../assets/images/menuimages/chiken-menchurya.jpeg" />
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">{{ item.title }}</h2>
+              <p class="card_text">{{ item.description }}</p>
+              <span>$13.00</span>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
- <ul class="cards">
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/chiken-menchurya.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Chicken 555</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$13.00</span>
-        </div>
-      </div>
-    </li>
-    
-  </ul>
 
-  <ul class="cards">
+    <!-- <ul class="cards">
     <li class="cards_item">
       <div class="card">
         <div class="card_image"><img src="../assets/images/menuimages/chiken-menchurya.jpeg"></div>
@@ -59,133 +67,29 @@
       </div>
     </li>
    
-    </ul>
-    <h1 class="menu_cate_titel">Veg Appetizers</h1>
-    <ul class="cards">
-     
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/Curry-Leaf_Chicken.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Curry Leaf Chicken</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$15.00</span>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/Chilli-Shrimp.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Chilli Shrimp</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$15.00</span>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/menuimages.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Chilli Chicken</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$13.00</span>
-        </div>
-      </div>
-    </li>
-  </ul>
-    <h1 class="menu_cate_titel">Biryani, Fried Rice & More</h1>
-    <ul class="cards">
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/chiken-menchurya.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Chicken 555</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$12.00</span>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/checken_65.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Checken 65</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$10.00</span>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/Pepper_Chicken-Dry.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Pepper Chicken Dry</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$13.00</span>
-        </div>
-      </div>
-    </li>
-  </ul>
-    <h1 class="menu_cate_titel">Desserts</h1>
-    <ul class="cards">
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/Curry-Leaf_Chicken.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Curry Leaf Chicken</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$15.00</span>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/Chilli-Shrimp.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Chilli Shrimp</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$11.00</span>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/menuimages.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Chilli Chicken</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$09.00</span>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-
+    </ul> -->
+  </div>
 </template>
 <script>
-export default{
-   name: 'Header',
-   props: {
+export default {
+  name: "Header",
+  props: {
     newsData: Array,
-    },
-}
-
-
+  },
+};
 </script>
 
 <style>
-
-
-.main{
-
+.main {
   max-width: 1200px;
   margin: 20px auto;
+  margin-top: 50px !important; 
+  
 }
 h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: left;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
 }
 
 img {
@@ -246,10 +150,10 @@ img {
   color: #000;
   font-size: 0.875rem;
   line-height: 1.5;
-  margin-bottom: 1.25rem;    
+  margin-bottom: 1.25rem;
   font-weight: 400;
 }
-.menu_cate_titel{
+.menu_cate_titel {
   margin-left: 5%;
 }
-   </style>
+</style>

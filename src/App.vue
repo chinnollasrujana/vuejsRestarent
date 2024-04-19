@@ -41,19 +41,16 @@ export default {
   methods: {
     async fetchNewsFeed() {
       try {
-        //const response = await fetch('https://priyatham.onrender.com/api');
-       const response = await fetch('http://127.0.0.1:3000/fooditems');
+        const response = await fetch('https://priyatham.onrender.com/api');
+       // const response = await fetch('http://127.0.0.1:3000/fooditems');
         console.log()
        
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
 
-        const dataList = await response.json();
-       return dataList;
-        console.log(dataList)
-        
-        //return dataList[0];
+        const data = await response.json();
+        return data[0]['news'];
       } catch (error) {
         console.error('Error fetching news feed:', error.message);
         this.error = 'Error fetching data. Please try again later.';
