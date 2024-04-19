@@ -6,8 +6,8 @@
         <li class="cards_item" v-for="item in foodData" :key="item.id">
           <div class="card">
             <div class="card_image">
-              <img src="../assets/images/menuimages/chiken-menchurya.jpeg" />
-              
+              <!-- <img src="../assets/images/menuimages/chiken-menchurya.jpeg" /> -->
+              <img :src="'../src/assets/images/menuimages/'+item.image_name">
             </div>
             <div class="card_content">
               <h2 class="card_title">{{ item.name }}</h2>
@@ -20,23 +20,7 @@
         </li>
       </ul>
     </div>
-    <div class="menu-feed">
-      <h1 class="menu_cate_titel">Veg Appetizers</h1>
-      <ul class="cards">
-        <li class="cards_item" v-for="item in foodData" :key="item.id">
-          <div class="card">
-            <div class="card_image">
-              <img src="../assets/images/menuimages/chiken-menchurya.jpeg" />
-            </div>
-            <div class="card_content">
-              <h2 class="card_title">{{ item.title }}</h2>
-              <p class="card_text">{{ item.description }}</p>
-              <span>$13.00</span>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
+   
 
 
   </div>
@@ -102,7 +86,10 @@ img {
   flex-direction: column;
   overflow: hidden;
 }
-
+.card_image img{
+  width: 340px;
+  height: 300px !important;
+}
 .card_content {
   padding: 1rem;
   /* background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%); */
