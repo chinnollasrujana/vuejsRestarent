@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="news-feed">
+    <div class="menu-feed">
       <h1 class="menu_cate_titel">Non Veg Appetizers</h1>
       <ul class="cards">
         <li class="cards_item" v-for="item in newsData" :key="item.id">
@@ -17,7 +17,7 @@
         </li>
       </ul>
     </div>
-    <div class="news-feed">
+    <div class="menu-feed">
       <h1 class="menu_cate_titel">Veg Appetizers</h1>
       <ul class="cards">
         <li class="cards_item" v-for="item in newsData" :key="item.id">
@@ -35,39 +35,6 @@
       </ul>
     </div>
 
-    <!-- <ul class="cards">
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/chiken-menchurya.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Chicken 555</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$13.00</span>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/checken_65.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Checken 65</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$12.00</span>
-        </div>
-      </div>
-    </li>
-    <li class="cards_item">
-      <div class="card">
-        <div class="card_image"><img src="../assets/images/menuimages/Pepper_Chicken-Dry.jpeg"></div>
-        <div class="card_content">
-          <h2 class="card_title">Pepper Chicken Dry</h2>
-          <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-          <span>$17.00</span>
-        </div>
-      </div>
-    </li>
-   
-    </ul> -->
   </div>
 </template>
 <script>
