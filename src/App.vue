@@ -8,7 +8,7 @@
     <!-- <HelloWorld msg="You did it!" /> -->
 
     <main>
-      <RouterView  :newsData="newsFeedItems"/>
+      <RouterView  :foodData="foodFeedItems"/>
     </main>
   </div>
   <Footer></Footer>
@@ -30,9 +30,9 @@ export default {
   data() {
     return {
       appTitle: 'Indian Restarent',
-      appSubTitle: 'Indian Informed',
+      appSubTitle: 'Indian Food',
       yourName: 'PK',
-      newsFeedItems: [],
+      foodFeedItems: [],
       currentYear: new Date().getFullYear(),
       loading: true,
       error: null,
@@ -61,9 +61,9 @@ export default {
     },
   },
   async created() {
-    this.newsFeedItems = await this.fetchNewsFeed();
+    this.foodFeedItems = await this.fetchNewsFeed();
 
-    console.log(this.newsFeedItems);
+    console.log(this.foodFeedItems);
   },
 };
 </script>

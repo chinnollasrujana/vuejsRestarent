@@ -3,7 +3,7 @@
     <div class="menu-feed">
       <h1 class="menu_cate_titel">Non Veg Appetizers</h1>
       <ul class="cards">
-        <li class="cards_item" v-for="item in newsData" :key="item.id">
+        <li class="cards_item" v-for="item in foodData" :key="item.id">
           <div class="card">
             <div class="card_image">
               <img src="../assets/images/menuimages/chiken-menchurya.jpeg" />
@@ -20,7 +20,7 @@
     <div class="menu-feed">
       <h1 class="menu_cate_titel">Veg Appetizers</h1>
       <ul class="cards">
-        <li class="cards_item" v-for="item in newsData" :key="item.id">
+        <li class="cards_item" v-for="item in foodData" :key="item.id">
           <div class="card">
             <div class="card_image">
               <img src="../assets/images/menuimages/chiken-menchurya.jpeg" />
@@ -35,13 +35,14 @@
       </ul>
     </div>
 
+
   </div>
 </template>
 <script>
 export default {
   name: "Header",
   props: {
-    newsData: Array,
+    foodData: Array,
   },
 };
 </script>
