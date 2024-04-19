@@ -29,8 +29,8 @@ export default {
   },
   data() {
     return {
-      appTitle: 'News App',
-      appSubTitle: 'Stay Informed',
+      appTitle: 'Indian Restarent',
+      appSubTitle: 'Indian Informed',
       yourName: 'PK',
       newsFeedItems: [],
       currentYear: new Date().getFullYear(),
