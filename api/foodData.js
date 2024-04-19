@@ -7,7 +7,7 @@ module.exports = async function() {
       // Connect to the MongoDB cluster
       await client.connect();
       // Make the appropriate DB calls
-     databasesList = await client.db("sample_mflix").collection("users").find({}).toArray()
+     databasesList = await client.db("sample_mflix").collection("food_Items").find({}).toArray()
      return databasesList;
 
   } catch (e) {

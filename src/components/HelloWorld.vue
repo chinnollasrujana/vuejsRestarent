@@ -7,11 +7,14 @@
           <div class="card">
             <div class="card_image">
               <img src="../assets/images/menuimages/chiken-menchurya.jpeg" />
+              
             </div>
             <div class="card_content">
-              <h2 class="card_title">{{ item.title }}</h2>
+              <h2 class="card_title">{{ item.name }}</h2>
               <p class="card_text">{{ item.description }}</p>
-              <span>$13.00</span>
+              <span>{{ item.category_name }}</span>
+              <span>{{ item.price }}</span>
+            <p>{{item.image_name }}</p>  
             </div>
           </div>
         </li>
