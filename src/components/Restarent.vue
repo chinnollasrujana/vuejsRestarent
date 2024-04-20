@@ -6,7 +6,6 @@
         <li class="cards_item" v-for="item in foodData" :key="item.id">
           <div class="card">
             <div class="card_image">
-              <!-- <img src="../assets/images/menuimages/chiken-menchurya.jpeg" /> -->
               <img :src="'../src/assets/images/menuimages/'+item.image_name">
             </div>
             <div class="card_content">
@@ -22,9 +21,6 @@
         </li>
       </ul>
     </div>
-   
-
-
   </div>
 </template>
 <script>
@@ -94,7 +90,6 @@ img {
 }
 .card_content {
   padding: 1rem;
-  /* background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%); */
 }
 
 .card_title {

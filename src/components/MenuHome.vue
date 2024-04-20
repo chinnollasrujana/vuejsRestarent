@@ -138,7 +138,6 @@ img {
 
 .card_content {
   padding: 1rem;
-  /* background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%); */
 }
 
 .card_title {
@@ -166,7 +165,7 @@ img {
 .item {
   flex: 0 32%;
   height: 100px;
-  margin-bottom: 2%; /* (100-32*3)/2 */
+  margin-bottom: 2%; 
 }
 .filter-button {
   text-transform: uppercase;
