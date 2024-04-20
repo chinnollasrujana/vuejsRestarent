@@ -171,7 +171,7 @@ header .nav .logo{
     }
 
     .navbar .menu-items{
-        padding-top: 400px;
+        padding-top: 30px;
         background: #fff;
         height: 100vh;
         transform: translate(-150%);
@@ -221,7 +221,7 @@ header .nav .logo{
         display: none;
     }
     .navbar .menu-items{
-        padding-top: 500px;
+        padding-top: 30px;
         background: #fff;
         height: 100vh;
         transform: translate(-150%);

@@ -12,9 +12,11 @@
             <div class="card_content">
               <h2 class="card_title">{{ item.name }}</h2>
               <p class="card_text">{{ item.description }}</p>
-              <span>{{ item.category_name }}</span>
-              <span>{{ item.price }}</span>
-            <p>{{item.image_name }}</p>  
+              
+              <div class="price_section">
+                <p>{{ item.category_name }}</p>
+                <h3>${{ item.price }}</h3>
+              </div>
             </div>
           </div>
         </li>
@@ -114,4 +116,10 @@ img {
 .menu_cate_titel {
   margin-left: 5%;
 }
+.price_section{
+  display: block;
+  text-align: center;
+}
+
+
 </style>

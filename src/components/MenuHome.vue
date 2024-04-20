@@ -6,6 +6,7 @@
           class="cards_item"
           v-for="(category, index) in categories"
           :key="index"
+          @click="filterFoodItems(category)"
         >
           <div class="card">
             <div class="card_image">
@@ -17,15 +18,40 @@
           </div>
         </li>
       </ul>
-      <button class="filter-button show-all-button" @click="showAll(category)">
-        Show All
-      </button>
+      
+    </div>
+
+  
+      <div class="menu-feed">
+      <h1 class="menu_cate_titel">All Menu</h1>
+      <ul class="cards">
+        <li class="cards_item" v-for="item in foodData" :key="item.id">
+          <div class="card">
+            <div class="card_image">
+              <img :src="'../src/assets/images/menuimages/'+item.image_name">
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">{{ item.name }}</h2>
+              <p class="card_text">{{ item.description }}</p>
+              
+              <div class="price_section">
+                <p>{{ item.category_name }}</p>
+                <h3>${{ item.price }}</h3>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
+
 </template>
 <script>
 export default {
   name: "Header",
+  props: {
+        foodData: Array,
+      },
   data() {
     return {
       selectedCategory: null,
@@ -51,17 +77,6 @@ export default {
           image_url: "Samosa-apts.png",
         }
       ],
-      methods: {
-        filterFoodItems(category) {
-          // Set selectedArticle data to
-          // selected category's name
-          this.selectedArticle = category;
-        },
-        // set selectedArticle data to null
-        showAll() {
-          this.selectedArticle = null;
-        },
-      },
     }
   }
 }

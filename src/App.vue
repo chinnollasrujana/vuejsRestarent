@@ -1,14 +1,10 @@
-
-
-
-
 <template>
   <Header></Header>
   <div class="wrapper">
     <!-- <HelloWorld msg="You did it!" /> -->
 
     <main>
-      <RouterView  :foodData="foodFeedItems"/>
+      <RouterView  :foodData="foodItems"/>
     </main>
   </div>
   <Footer></Footer>
@@ -31,29 +27,26 @@ export default {
     return {
       appTitle: 'Indian Restarent',
       appSubTitle: 'Indian Food',
-      yourName: 'PK',
-      foodFeedItems: [],
-      currentYear: new Date().getFullYear(),
-      loading: true,
+      foodItems: [],
       error: null,
     };
   },
   methods: {
-    async fetchNewsFeed() {
+    async fetchFoodItemsList() {
       try {
-        //const response = await fetch('https://priyatham.onrender.com/api');
+      
        const response = await fetch('http://127.0.0.1:3000/fooditems');
        
        
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('API response was not ok');
         }
 
         const data = await response.json();
         return data;
         //return data[0]['news'];
       } catch (error) {
-        console.error('Error fetching news feed:', error.message);
+        console.error('Error fetching Food Items:', error.message);
         this.error = 'Error fetching data. Please try again later.';
         return [];
       } finally {
@@ -62,9 +55,9 @@ export default {
     },
   },
   async created() {
-    this.foodFeedItems = await this.fetchNewsFeed();
+    this.foodItems = await this.fetchFoodItemsList();
 
-    console.log(this.foodFeedItems);
+    console.log(this.foodItems);
   },
 };
 </script>
@@ -78,17 +71,13 @@ body {
 
 #app {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 #app div {
-  margin-top: 10px;
+  margin-top: 0px;
   font-weight: bold;
   color: black;
-}
-
-.loading {
-  color: #00f;
 }
 
 .error {
